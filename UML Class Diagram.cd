@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EchoVibe.Backend.Classes.Comment">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAgAAAAEAAAAAAAAAAAAAAAAgAQAAIAAAAAA=</HashCode>
+      <FileName>Backend\Classes\Comment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Classes.CommentLike">
+    <Position X="2.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Backend\Classes\CommentLike.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Classes.Database">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAABAIAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Backend\Classes\Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Classes.Friend">
+    <Position X="7" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAEAAAAAAACAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Backend\Classes\Friend.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Classes.Post">
+    <Position X="9" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAgAAAAEAAAAAgAAAAAAAAAAAAgAQAAAAAAA=</HashCode>
+      <FileName>Backend\Classes\Post.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Classes.PostLike">
+    <Position X="11" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAEAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Backend\Classes\PostLike.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Classes.User">
+    <Position X="13.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAICAAAAAAAgAAAAQAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Backend\Classes\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.BlocksService">
+    <Position X="0.5" Y="3.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAQEAAAAAAAAAAAAAACwAAAAAAAAQCAAAA=</HashCode>
+      <FileName>Backend\Services\BlocksService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.CommentLikeService">
+    <Position X="4" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAEAAAAEoAAAAAAAAAAEAAAAEAAAAAAAA=</HashCode>
+      <FileName>Backend\Services\CommentLikeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.CommentService">
+    <Position X="7.25" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAIBAAAAAAEAAAAAAAACAACAAAAAIAIAAAAQAA=</HashCode>
+      <FileName>Backend\Services\CommentService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.EncryptService">
+    <Position X="10.25" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgAAgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Backend\Services\EncryptService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.FriendService">
+    <Position X="0.5" Y="6.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CAEAAAAAAAAAAAAAAAAgAAAAAAQABAAgIAAIAEAAAAA=</HashCode>
+      <FileName>Backend\Services\FriendService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.PostLikeService">
+    <Position X="4" Y="6.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACAACEAAAAAoAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Backend\Services\PostLikeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.PostService">
+    <Position X="7" Y="6.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAEAQABQAEAAAAAIgAAAABAAQAABAAAAAAQEA=</HashCode>
+      <FileName>Backend\Services\PostService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EchoVibe.Backend.Services.UserService">
+    <Position X="10" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BDEAAAAAEAAIAAAAAAAAAAAgMIAAAAAoYAAIB4AAQAQ=</HashCode>
+      <FileName>Backend\Services\UserService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
