@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="EchoVibe.View.Control_User.Post_Scroll_Viewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EchoVibe.View.Control_User"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer  x:Name="Post_Block_Scroll_Viewer" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="Post_Block_StackPanel_In_The_ScrollViewer">
+                <!-- 3mol list bel C# w access 3al StackPanel baynetoun-->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

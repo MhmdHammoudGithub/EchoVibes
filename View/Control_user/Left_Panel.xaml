@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="EchoVibe.View.Control_User.Left_Panel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EchoVibe.View.Control_User" 
+             d:DataContext="{d:DesignInstance Type=local:User_Input}"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="250">
+    
+    <Grid Background="#002455">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="Refresh_Button"
+                Grid.Row="0"
+                Margin="10 10 10 5"
+                Background="Transparent"
+                Width="70" 
+                BorderThickness="0"
+                Click="Refresh_Button_Click">
+            <Image Source="/Images/Cropped logo.jpeg"/>
+        </Button>
+
+        <TextBlock x:Name="User_Name_TextBlock" 
+                   Grid.Row="1"
+                   Foreground="White"
+                   Style="{StaticResource PanelUserName}"
+                   VerticalAlignment="Center"
+                   Margin="10 0 10 5" />
+
+        <ToggleButton x:Name="Home_Button"
+                      Grid.Row="2" 
+                      Content="Home" 
+                      Height="40" 
+                      Checked="Page_Toggle_Button_Checked"
+                      Style="{StaticResource PanelToggleButton}"
+                      Margin="30 2"/>
+
+        <ToggleButton x:Name="MyProfile_Button"
+                      Grid.Row="3"
+                      Content="My Profile"
+                      Height="40"
+                      Checked="Page_Toggle_Button_Checked"
+                      Style="{StaticResource PanelToggleButton}"
+                      Margin="30 2"/>
+
+        <ToggleButton  x:Name="Friends_ToggleButton"
+                       Grid.Row="4"
+                       Height="40" 
+                       Margin="30 2" 
+                       Style="{StaticResource PanelToggleButton}" 
+                       Click="Friends_ToggleButton_Click"
+                       Content="My Friends"/>
+
+        <ToggleButton x:Name="Search_Button"
+                      Grid.Row="5" 
+                      Content="Search"  
+                      Height="40" 
+                      Checked="Page_Toggle_Button_Checked"
+                      Style="{StaticResource PanelToggleButton}"
+                      Margin="30 2"/>
+
+        <Button  x:Name="Create_Post_Button"
+                 Grid.Row="6"
+                 Height="40"
+                 Margin="30 2" 
+                 Style="{StaticResource PanelButton}"
+                 Click="Create_Post_Button_Click"
+                 Content="Create Post"/>
+
+
+
+        <Button  x:Name="Logout_Button"
+                 Grid.Row="8"
+                 Height="40"
+                 Margin="30 0 30 90"  
+                 Click="Logout_Button_Click" 
+                 Content="Logout" 
+                 Style="{StaticResource PanelButton}"/>
+    </Grid>
+</UserControl>

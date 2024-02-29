@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="EchoVibe.View.Control_User.Right_Panel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EchoVibe.View.Control_User"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="250">
+    <Border BorderBrush="#0097B2" BorderThickness="0 0 1 0" 
+            Width="auto" 
+            MinWidth="200">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="Refresh_Button" 
+                    Grid.Column="1"
+                    Content="↻"
+                    Foreground="White"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    VerticalContentAlignment="Top"
+                    FontSize="22" 
+                    Click="Refresh_Button_Click"
+                    Panel.ZIndex="10"
+                    Style="{StaticResource UserNameButtonStyle}"/>
+            
+            <Grid x:Name="My_Friends_Grid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Text="My Friends"
+                           Grid.Row="0"
+                           Style="{StaticResource PanelUserName}"
+                           VerticalAlignment="Center"
+                           Margin="5" 
+                           FontSize="18"
+                           Foreground="White"/>
+
+            </Grid>
+            <Border BorderBrush="#0097B2" 
+                    BorderThickness="0 1 0 0"
+                    Grid.Row="1">
+                
+                <Grid x:Name="My_Potential_Friends_Grid" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Text="Friends Requests"
+                               Grid.Row="0"
+                               Style="{StaticResource PanelUserName}"
+                               VerticalAlignment="Center"
+                               Margin="5"  
+                               FontSize="18" 
+                               Foreground="White"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>
