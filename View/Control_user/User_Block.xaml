@@ -1,0 +1,268 @@
+﻿<UserControl x:Class="EchoVibe.View.Control_User.User_Block"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EchoVibe.View.Control_User" 
+             d:DataContext="{d:DesignInstance Type=local:User_Block}"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300">
+    <Grid>
+        <Border BorderBrush="Black" 
+                BorderThickness="1">
+            <Grid Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" 
+                       Margin="0"
+                       HorizontalAlignment="Left"
+                       Source="/Images/Profile picture.jpg"/>
+                
+                <Button x:Name="User_Name_Button" 
+                        Grid.Column="1" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="0" 
+                        FontSize="20" 
+                        Click="User_Name_Button_Click"
+                        Style="{StaticResource UserNameButtonStyle}"/>
+
+                
+                <Grid x:Name="ProfileGrid"
+                      Grid.Column="2" 
+                      Visibility="{Binding ProfileGridVisibility}">
+                    
+                    <Button x:Name="Add_Friend_In_Profile_Grid"
+                            Content="Request" 
+                            Visibility="{Binding AddFriendInProfileVisibility}" 
+                            Margin="5"
+                            Background="Transparent"
+                            Foreground="#002455" 
+                            BorderThickness="0"
+                            FontSize="16"
+                            Click="Add_Friend_In_Profile_Grid_Click"/>
+                    
+                    <Grid Visibility="{Binding AlreadyFriendProfileGridVisibility}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock x:Name="Already_Friend_In_Search_Grid" 
+                                   Grid.Row="1"
+                                   Text="Friend ✔" 
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="5" 
+                                   FontSize="16" 
+                                   Foreground="Green" 
+                                   TextAlignment="Center"/>
+                        
+                        <Button x:Name="Remove_Friend_In_Profile_Grid"
+                                Grid.Row="3" 
+                                Content="Remove Friend" 
+                                BorderThickness="0" 
+                                FontSize="16"
+                                Margin="5" 
+                                Background="Transparent"
+                                Foreground="Red"
+                                Click="Remove_Friend_In_Profile_Grid_Click"/>
+                        
+                    </Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock x:Name="Request_Sent_In_Profile_Grid" 
+                                   Grid.Row="1" 
+                                   HorizontalAlignment="Center"
+                                   Margin="5" 
+                                   FontSize="16"
+                                   Text="Request Sent" 
+                                   Visibility="{Binding RequestSentInProfileVisibility}"
+                                   TextAlignment="Center"
+                                   Background="Transparent" 
+                                   Foreground="Green"/>
+
+                        <Button x:Name="Delete_Request_In_Profile_Grid"
+                                Grid.Row="3" 
+                                Content="Remove"
+                                BorderThickness="0"
+                                FontSize="16"
+                                Visibility="{Binding RequestSentInProfileVisibility}" 
+                                Margin="5"
+                                Background="Transparent"
+                                Foreground="Red"
+                                Click="Delete_Request_In_Profile_Grid_Click"/>
+                    </Grid>
+                    <StackPanel x:Name="Request_Answer_In_Profile_Grid"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Margin="2" 
+                                Visibility="{Binding RequestAnswerInProfileVisibility}">
+                        
+                        <Button x:Name="Accept_Request_In_Profile_Grid"
+                                Content="Accept Friend"
+                                BorderThickness="0"
+                                FontSize="16"
+                                Margin="5" 
+                                VerticalAlignment="Top" 
+                                Foreground="Green"
+                                Background="Transparent" 
+                                Click="Accept_Request_In_Profile_Grid_Click"/>
+                        
+                        <Button x:Name="Decline_Request_In_Profile_Grid"
+                                Content="Reject Friend" 
+                                BorderThickness="0"
+                                FontSize="16"
+                                Margin="5" 
+                                VerticalAlignment="Bottom"
+                                Foreground="Red"
+                                Background="Transparent"
+                                Click="Decline_Request_In_Profile_Grid_Click"/>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="SearchGrid" 
+                      Grid.Column="2"
+                      Visibility="{Binding SearchGridVisibility}">
+
+                    <Button x:Name="Send_FriendRequest_In_Search_Grid" 
+                            Content="Request" 
+                            Width="65" 
+                            Height="30" 
+                            Visibility="{Binding AddFriendVisibility}" 
+                            Margin="5" 
+                            Background="Transparent" 
+                            Foreground="#002455"
+                            BorderThickness="0"
+                            Click="Send_FriendRequest_In_Search_Grid_Click"/>
+
+                    <TextBlock x:Name="Already_Friend_In_Profile_Grid"
+                               Text="Friend ✔" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="5" 
+                               FontSize="12" 
+                               Visibility="{Binding AlreadyFriendSearchGridVisibility}"
+                               Foreground="Green"
+                               Width="65" 
+                               TextAlignment="Center"/>
+
+                    <Grid Visibility="{Binding RequestSentVisibility}">
+                        <TextBlock x:Name="Request_Sent_In_Profile"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   Margin="5"
+                                   FontSize="10" 
+                                   Text="Request Sent"
+                                   Width="65" 
+                                   TextAlignment="Center"
+                                   Height="15"
+                                   Background="Transparent"
+                                   Foreground="Green"/>
+
+                        <Button x:Name="Delete_Request_In_Search_Grid"
+                                Content="Delete"
+                                Width="65" 
+                                BorderThickness="0"
+                                FontSize="10"
+                                Margin="5"
+                                VerticalAlignment="Bottom" 
+                                Height="15"
+                                Background="Transparent" 
+                                Foreground="Red"
+                                Click="Delete_Request_In_Search_Grid_Click"/>
+                    </Grid>
+
+                    <StackPanel x:Name="RequestAnswer_In_Profile"
+                                Grid.Row="3" 
+                                Orientation="Horizontal" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center"
+                                Margin="2" 
+                                Visibility="{Binding RequestAnswerVisibility}">
+
+                        <Button x:Name="Accept_Request_In_Search_Grid" 
+                                Content="✔" 
+                                BorderThickness="0"
+                                FontSize="14"
+                                Margin="1" 
+                                VerticalAlignment="Top" 
+                                Foreground="Green" 
+                                Width="22"
+                                Background="Transparent" 
+                                Click="Accept_Request_In_Search_Grid_Click"/>
+
+                        <Button x:Name="Decline_Request_In_Search_Grid"
+                                Content="✕" 
+                                BorderThickness="0"
+                                FontSize="14"
+                                Margin="1" 
+                                VerticalAlignment="Bottom"
+                                Foreground="Red" 
+                                Width="22"
+                                Background="Transparent" 
+                                Click="Decline_Request_In_Search_Grid_Click"/>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="RequestGrid" 
+                      Grid.Column="2"
+                      Visibility="{Binding RequestGridVisibility}">
+                    <StackPanel Orientation="Horizontal" 
+                                VerticalAlignment="Center" 
+                                Margin="2" 
+                                HorizontalAlignment="Center">
+
+                        <Button x:Name="Accept_Request_In_Request_Grid" 
+                                Content="✔" 
+                                BorderThickness="0" 
+                                FontSize="14"
+                                Margin="1" 
+                                VerticalAlignment="Top" 
+                                Foreground="Green"
+                                Width="22"
+                                Background="Transparent" 
+                                Click="Accept_Request_In_Request_Grid_Click"/>
+
+                        <Button x:Name="Decline_Request_In_Request_Grid"
+                                Content="✕"
+                                BorderThickness="0" 
+                                FontSize="14"
+                                Margin="1" 
+                                VerticalAlignment="Bottom"
+                                Foreground="Red"
+                                Width="22"
+                                Background="Transparent"
+                                Click="Decline_Request_In_Request_Grid_Click"/>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="MyProfileGrid" 
+                      Grid.Column="2" 
+                      Visibility="{Binding MyProfileGridVisibility}">
+                    
+                    <Button x:Name="Delete_Account_In_My_Profile_Grid"
+                            Content="Delete Account" 
+                            BorderThickness="1"
+                            FontSize="16"
+                            Margin="5 30" 
+                            BorderBrush="Red" 
+                            Background="White"
+                            Foreground="Red"
+                            Click="Delete_Account_In_My_Profile_Grid_Click"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
